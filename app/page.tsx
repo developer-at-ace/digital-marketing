@@ -12,6 +12,7 @@ import {
   WorkPreview,
 } from "@/components/home/HomePageSections";
 import { DeploymentShowcase } from "@/components/home/DeploymentShowcase";
+import { PlatformMarquee } from "@/components/home/PlatformMarquee";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <PlatformMarquee />
       <Principles />
       <ServiceGrid />
       <AiSpotlight />
