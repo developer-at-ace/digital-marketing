@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { services } from "@/data/site";
 
 export function Footer() {
@@ -36,8 +36,23 @@ export function Footer() {
           </div>
           <div className="col-6 col-md-6 col-lg-3">
             <h3>Get in touch</h3>
-            <a className="footer-link" href="mailto:info@suamglobalventures.com">info@suamglobalventures.com</a>
-            <a className="footer-link" href="tel:9888976796">9888976796</a>
+            <a className="footer-contact-link" href="mailto:info@suamglobalventures.com">
+              <Mail size={15} aria-hidden="true" />
+              <span>info@suamglobalventures.com</span>
+            </a>
+            <a className="footer-contact-link" href="tel:9888976796">
+              <Phone size={15} aria-hidden="true" />
+              <span>9888976796</span>
+            </a>
+            <a
+              className="footer-contact-link"
+              href="https://maps.google.com/?q=225%2C%20Phase%20IV%2C%20Udyog%20Vihar%2C%20Sector%2018%2C%20Gurugram%2C%20Haryana%20122015"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MapPin size={15} aria-hidden="true" />
+              <span>225, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana 122015</span>
+            </a>
             <Link className="footer-link" href="/contact">Contact & project brief</Link>
             <Link className="footer-link" href="/privacy-policy">Privacy policy</Link>
             <Link className="footer-link" href="/terms">Terms of use</Link>
