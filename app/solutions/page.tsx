@@ -5,8 +5,8 @@ import { PageIntro } from "@/components/ui/PageIntro";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Solutions",
-  description: "Explore practical technology directions for automation, digital foundations, connected operations, and planning.",
+  title: "Digital Growth Solutions",
+  description: "Find practical ways to improve digital marketing, automate workflows, connect business systems and plan technology around your goals.",
   path: "/solutions",
 });
 

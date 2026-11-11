@@ -17,9 +17,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const industry = industries.find((item) => item.slug === slug);
-  if (!industry) return { title: "Industry not found", robots: { index: false, follow: false } };
+  if (!industry) {
+    return {
+      title: "Industry Not Found",
+      description: "The industry page you are looking for could not be found.",
+      robots: { index: false, follow: false },
+    };
+  }
   return createPageMetadata({
-    title: industry.title,
+    title: `${industry.title} Digital Solutions`,
     description: industry.description,
     path: `/industries/${industry.slug}`,
   });

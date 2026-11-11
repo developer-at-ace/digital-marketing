@@ -18,7 +18,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
-  if (!service) return { title: "Service not found", robots: { index: false, follow: false } };
+  if (!service) {
+    return {
+      title: "Service Not Found",
+      description: "The service page you are looking for could not be found.",
+      robots: { index: false, follow: false },
+    };
+  }
   return createPageMetadata({
     title: service.title,
     description: service.description,

@@ -6,8 +6,8 @@ import { PageEndCTA } from "@/components/home/HomePageSections";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Insights",
-  description: "Practical thinking on AI, digital products, and the systems behind them.",
+  title: "Digital Growth Insights",
+  description: "Read practical insights on digital marketing, SEO, business AI, website planning and systems integration from SuamGlobalDigital.",
   path: "/insights",
 });
 

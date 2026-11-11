@@ -14,28 +14,34 @@ const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: { default: `${SITE_NAME} | Technology for what’s next`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} | Digital Marketing & Technology Solutions`, template: `%s | ${SITE_NAME}` },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Technology for what’s next`,
+    title: `${SITE_NAME} | Digital Marketing & Technology Solutions`,
     description: DEFAULT_DESCRIPTION,
     ...(siteUrl ? {
+      url: siteUrl.toString(),
       images: [{
         url: new URL(SOCIAL_IMAGE, siteUrl).toString(),
         width: 1200,
         height: 630,
-        alt: `${SITE_NAME} — AI, software and digital transformation`,
+        alt: `${SITE_NAME} digital marketing, SEO, web development, and technology solutions`,
       }],
     } : {}),
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Technology for what’s next`,
+    title: `${SITE_NAME} | Digital Marketing & Technology Solutions`,
     description: DEFAULT_DESCRIPTION,
-    ...(siteUrl ? { images: [new URL(SOCIAL_IMAGE, siteUrl).toString()] } : {}),
+    ...(siteUrl ? {
+      images: [{
+        url: new URL(SOCIAL_IMAGE, siteUrl).toString(),
+        alt: `${SITE_NAME} digital marketing, SEO, web development, and technology solutions`,
+      }],
+    } : {}),
   },
 };
 
@@ -55,6 +61,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               name: SITE_NAME,
               description: DEFAULT_DESCRIPTION,
               ...(siteUrl ? { url: siteUrl.toString() } : {}),
+              logo: siteUrl ? new URL("/icon.svg", siteUrl).toString() : undefined,
+              email: "info@suamglobalventures.com",
+              telephone: "9888976796",
+              contactPoint: [{
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                email: "info@suamglobalventures.com",
+                telephone: "9888976796",
+                url: siteUrl ? new URL("/contact", siteUrl).toString() : undefined,
+              }],
           }}
         />
         <JsonLd

@@ -4,8 +4,8 @@ import { PageIntro } from "@/components/ui/PageIntro";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Contact & Project Brief",
-  description: "Tell us what you are planning and send a project brief to SuamGlobalDigital.",
+  title: "Contact Our Digital Team",
+  description: "Contact SuamGlobalDigital to discuss digital marketing, SEO, website development or technology projects. Email info@suamglobalventures.com or call 9888976796.",
   path: "/contact",
 });
 

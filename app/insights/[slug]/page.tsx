@@ -23,7 +23,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         path: `/insights/${article.slug}`,
         type: "article",
       })
-    : { title: "Insight not found", robots: { index: false, follow: false } };
+    : {
+        title: "Insight Not Found",
+        description: "The insight article you are looking for could not be found.",
+        robots: { index: false, follow: false },
+      };
 }
 
 export default async function InsightDetailPage({ params }: Props) {

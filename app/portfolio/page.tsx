@@ -6,8 +6,8 @@ import { PageEndCTA } from "@/components/home/HomePageSections";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Work & Engagements",
-  description: "Explore transparent examples of how a technology engagement can move from discovery to delivery.",
+  title: "Digital Project Work & Delivery",
+  description: "See how SuamGlobalDigital structures discovery, digital product delivery and connected business systems projects, from first questions to a practical plan.",
   path: "/portfolio",
 });
 

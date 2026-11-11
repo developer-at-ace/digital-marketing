@@ -3,7 +3,7 @@ import { getSiteUrl } from "@/lib/site-url";
 
 export const SITE_NAME = "SuamGlobalDigital";
 export const DEFAULT_DESCRIPTION =
-  "Thoughtful AI, software, and digital transformation for the work that matters.";
+  "SuamGlobalDigital helps businesses grow through practical digital marketing, SEO, web development, and technology solutions.";
 export const SOCIAL_IMAGE = "/social-image";
 
 export function createBreadcrumbSchema(items: { name: string; path: string }[]) {
@@ -37,27 +37,28 @@ export function createPageMetadata({
 }: PageMetadataInput): Metadata {
   const siteUrl = getSiteUrl();
   const canonicalUrl = siteUrl ? new URL(path, siteUrl).toString() : path;
+  const pageTitle = `${title} | ${SITE_NAME}`;
   const socialImage = siteUrl
     ? [{ url: new URL(SOCIAL_IMAGE, siteUrl).toString(), width: 1200, height: 630, alt: `${SITE_NAME} — ${title}` }]
     : undefined;
 
   return {
-    title,
+    title: { absolute: pageTitle },
     description,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       type,
       siteName: SITE_NAME,
-      title,
+      title: pageTitle,
       description,
       url: canonicalUrl,
       ...(socialImage ? { images: socialImage } : {}),
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
-      ...(siteUrl ? { images: socialImage?.map(({ url }) => url) } : {}),
+      ...(socialImage ? { images: socialImage.map(({ url, alt }) => ({ url, alt })) } : {}),
     },
   };
 }

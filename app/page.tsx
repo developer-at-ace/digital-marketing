@@ -16,8 +16,8 @@ import { PlatformMarquee } from "@/components/home/PlatformMarquee";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "AI, Software & Digital Transformation",
-  description: "Explore practical AI, business systems, digital products, and technology consulting for your organisation.",
+  title: "Digital Marketing & SEO",
+  description: "Grow your business with digital marketing, SEO and web development from SuamGlobalDigital. Explore practical strategies, tech services and clear next steps.",
   path: "/",
 });
 

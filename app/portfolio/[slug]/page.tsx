@@ -19,7 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const item = deliveryFormats.find((format) => format.slug === slug);
   return item
     ? createPageMetadata({ title: item.title, description: item.summary, path: `/portfolio/${item.slug}` })
-    : { title: "Engagement format not found", robots: { index: false, follow: false } };
+    : {
+        title: "Engagement Format Not Found",
+        description: "The project engagement page you are looking for could not be found.",
+        robots: { index: false, follow: false },
+      };
 }
 
 export default async function EngagementPage({ params }: Props) {

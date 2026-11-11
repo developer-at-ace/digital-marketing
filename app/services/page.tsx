@@ -6,8 +6,8 @@ import { CiCdWorkflow } from "@/components/home/CiCdWorkflow";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Technology Services",
-  description: "Explore AI, software, business systems, cybersecurity, cloud, digital marketing, and technology consulting.",
+  title: "Digital Marketing & Tech Services",
+  description: "Explore SuamGlobalDigital's digital marketing, SEO, website development, AI, cybersecurity, cloud and business technology services.",
   path: "/services",
 });
 

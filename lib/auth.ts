@@ -1,7 +1,7 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
-export const ADMIN_COOKIE = "technova_admin";
+export const ADMIN_COOKIE = "suamglobaldigital_admin";
 const SESSION_SECONDS = 60 * 60 * 8;
 
 export function adminAuthConfigured() {

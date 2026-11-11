@@ -7,8 +7,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Industries",
-  description: "Explore how thoughtful digital products and technology planning can support different industry needs.",
+  title: "Digital Solutions by Industry",
+  description: "Explore digital marketing, software and technology for the workflows and customer needs of healthcare, education, retail, finance and more.",
   path: "/industries",
 });
 
