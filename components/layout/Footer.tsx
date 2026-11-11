@@ -56,7 +56,6 @@ export function Footer() {
             <Link className="footer-link" href="/contact">Contact & project brief</Link>
             <Link className="footer-link" href="/privacy-policy">Privacy policy</Link>
             <Link className="footer-link" href="/terms">Terms of use</Link>
-            <Link className="footer-link" href="/admin/leads">Lead portal</Link>
           </div>
         </div>
         <div className="footer-bottom">
