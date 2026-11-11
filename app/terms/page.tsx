@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   title: "Terms of Use",
-  description: "Terms for using the TechNova website and its general information.",
+  description: "Terms for using the SuamGlobalDigital website and its general information.",
   path: "/terms",
 });
 

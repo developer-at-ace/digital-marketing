@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/site-url";
 
-export const SITE_NAME = "TechNova";
+export const SITE_NAME = "SuamGlobalDigital";
 export const DEFAULT_DESCRIPTION =
   "Thoughtful AI, software, and digital transformation for the work that matters.";
 export const SOCIAL_IMAGE = "/social-image";

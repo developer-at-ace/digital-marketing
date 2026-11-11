@@ -5,7 +5,7 @@ export function getSiteUrl() {
     configured ||
     (process.env.VERCEL_ENV === "production" && vercelProductionDomain
       ? `https://${vercelProductionDomain}`
-      : undefined);
+      : "https://suamglobalventures.com");
   if (!value) return undefined;
   try {
     const url = new URL(value);

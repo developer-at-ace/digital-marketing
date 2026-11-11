@@ -28,7 +28,7 @@ export function GET() {
               background: "linear-gradient(135deg, rgba(36,107,253,.3), rgba(124,58,237,.25))",
             }}
           />
-          TechNova
+          SuamGlobalDigital
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ color: "#75c9ff", fontSize: 18, fontWeight: 700, letterSpacing: 4 }}>

@@ -122,7 +122,7 @@ export function LeadForm() {
         <div className="col-12">
           <label className="consent-label" htmlFor="lead-consent">
             <input id="lead-consent" type="checkbox" {...register("consent")} aria-invalid={Boolean(errors.consent)} aria-describedby={errors.consent ? "lead-consent-error" : undefined} />
-            <span>I agree that TechNova may use these details to respond to my enquiry.</span>
+            <span>I agree that SuamGlobalDigital may use these details to respond to my enquiry.</span>
           </label>
           <p className="consent-more"><Link href="/privacy-policy">Read the privacy policy.</Link></p>
           {errors.consent && <span className="field-error" id="lead-consent-error">{errors.consent.message}</span>}

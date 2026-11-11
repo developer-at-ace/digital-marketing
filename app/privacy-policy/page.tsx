@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   title: "Privacy Policy",
-  description: "How information submitted through the TechNova website is handled.",
+  description: "How information submitted through the SuamGlobalDigital website is handled.",
   path: "/privacy-policy",
 });
 

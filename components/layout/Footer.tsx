@@ -18,7 +18,7 @@ export function Footer() {
           <div className="col-12 col-md-6 col-lg-3">
             <Link className="brand brand-footer" href="/">
               <span className="brand-mark" aria-hidden="true"><span /></span>
-              <span className="brand-name">TechNova<span>.</span></span>
+              <span className="brand-name">SuamGlobalDigital</span>
             </Link>
             <p className="footer-copy">Thoughtful technology for the work that matters.</p>
           </div>
@@ -36,6 +36,8 @@ export function Footer() {
           </div>
           <div className="col-6 col-md-6 col-lg-3">
             <h3>Get in touch</h3>
+            <a className="footer-link" href="mailto:info@suamglobalventures.com">info@suamglobalventures.com</a>
+            <a className="footer-link" href="tel:9888976796">9888976796</a>
             <Link className="footer-link" href="/contact">Contact & project brief</Link>
             <Link className="footer-link" href="/privacy-policy">Privacy policy</Link>
             <Link className="footer-link" href="/terms">Terms of use</Link>
@@ -43,7 +45,7 @@ export function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© TechNova. All rights reserved.</span>
+          <span>© SuamGlobalDigital. All rights reserved.</span>
           <span>Built for clarity, designed for what’s next.</span>
         </div>
       </div>

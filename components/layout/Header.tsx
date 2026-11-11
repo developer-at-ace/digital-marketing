@@ -35,9 +35,9 @@ export function Header() {
     }}>
       <div className="container">
         <div className="header-row">
-          <Link className="brand" href="/" aria-label="TechNova home" onClick={() => setMenuOpen(false)}>
+          <Link className="brand" href="/" aria-label="SuamGlobalDigital home" onClick={() => setMenuOpen(false)}>
             <span className="brand-mark" aria-hidden="true"><span /></span>
-            <span className="brand-name">TechNova<span>.</span></span>
+            <span className="brand-name">SuamGlobalDigital</span>
           </Link>
           <button
             ref={menuToggleRef}

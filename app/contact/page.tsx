@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   title: "Contact & Project Brief",
-  description: "Tell us what you are planning and send a project brief to TechNova.",
+  description: "Tell us what you are planning and send a project brief to SuamGlobalDigital.",
   path: "/contact",
 });
 

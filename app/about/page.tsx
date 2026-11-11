@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   title: "About",
-  description: "Learn about TechNova’s practical, people-first approach to technology and digital delivery.",
+  description: "Learn about SuamGlobalDigital’s practical, people-first approach to technology and digital delivery.",
   path: "/about",
 });
 

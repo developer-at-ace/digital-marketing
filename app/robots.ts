@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: isNonProductionDeployment
       ? { userAgent: "*", disallow: "/" }
-      : { userAgent: "*", allow: "/", disallow: ["/api/"] },
+      : { userAgent: "*", allow: "/", disallow: ["/api/", "/admin/"] },
     ...(base ? { sitemap: new URL("/sitemap.xml", base).toString() } : {}),
   };
 }
