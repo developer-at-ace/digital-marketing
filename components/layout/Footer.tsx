@@ -33,6 +33,9 @@ export function Footer() {
             <Link className="footer-link" href="/portfolio">Work</Link>
             <Link className="footer-link" href="/about">About</Link>
             <Link className="footer-link" href="/insights">Insights</Link>
+            <Link className="footer-link" href="/careers">Careers</Link>
+            <Link className="footer-link" href="/faq">FAQ</Link>
+            <Link className="footer-link" href="/responsible-ai">Responsible AI</Link>
           </div>
           <div className="col-6 col-md-6 col-lg-3">
             <h3>Get in touch</h3>
@@ -55,7 +58,9 @@ export function Footer() {
             </a>
             <Link className="footer-link" href="/contact">Contact & project brief</Link>
             <Link className="footer-link" href="/privacy-policy">Privacy policy</Link>
-            <Link className="footer-link" href="/terms">Terms of use</Link>
+            <Link className="footer-link" href="/cookie-policy">Cookie Policy</Link>
+            <Link className="footer-link" href="/terms-and-conditions">Terms & Conditions</Link>
+            <Link className="footer-link" href="/disclaimer">Website Disclaimer</Link>
           </div>
         </div>
         <div className="footer-bottom">

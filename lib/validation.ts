@@ -3,6 +3,7 @@ import { z } from "zod";
 export const leadSchema = z.object({
   name: z.string().trim().min(2, "Enter your name.").max(100),
   email: z.string().trim().email("Enter a valid email address.").max(254),
+  phone: z.string().trim().max(40, "Phone number must be 40 characters or fewer.").optional().default(""),
   company: z.string().trim().max(120).optional().default(""),
   service: z.enum([
     "AI & Automation",

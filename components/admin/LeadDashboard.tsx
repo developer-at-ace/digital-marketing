@@ -7,6 +7,7 @@ type Lead = {
   _id: string;
   name: string;
   email: string;
+  phone?: string;
   company: string;
   service: string;
   project: string;
@@ -181,6 +182,7 @@ export function LeadDashboard() {
                 <time dateTime={lead.createdAt}>{new Date(lead.createdAt).toLocaleDateString()}</time>
               </div>
               <a className="lead-email" href={`mailto:${encodeURIComponent(lead.email)}`}>{lead.email}</a>
+              {lead.phone && <p className="lead-meta"><a href={`tel:${encodeURIComponent(lead.phone)}`}>{lead.phone}</a></p>}
               <p className="lead-project">{lead.project}</p>
               {(lead.budget || lead.timeline) && <p className="lead-meta">{[lead.budget, lead.timeline].filter(Boolean).join(" · ")}</p>}
               <form className="lead-update row g-3" id={`lead-update-${lead._id}`} onSubmit={(event) => {

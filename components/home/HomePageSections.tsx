@@ -11,6 +11,7 @@ import {
   Compass,
   Cpu,
   LockKeyhole,
+  MessageSquareText,
 } from "lucide-react";
 import { industries, platformGroups, services, faqs } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -26,21 +27,21 @@ export function Hero() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-lg-6">
-            <span className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> AI · SOFTWARE · DIGITAL TRANSFORMATION</span>
-            <h1>Your Vision.<br />Our Technology.<br /><span>Unlimited Possibilities.</span></h1>
-            <p className="hero-copy">We help ambitious teams turn complex ideas into useful digital products, connected systems, and smarter ways of working.</p>
+            <span className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> SOFTWARE · AI · DIGITAL GROWTH</span>
+            <h1>Software Development,<br />AI &amp; Digital<br /><span>Transformation Services</span></h1>
+            <p className="hero-copy">Every business has its own challenges. We help businesses plan, develop, and improve the software, automation, and digital services they rely on. We understand your requirements before recommending technology, so every investment has a clear purpose.</p>
             <div className="hero-actions">
-              <Link className="button button-primary" href="/contact">Start Your Project <ArrowRight size={16} /></Link>
-              <Link className="button button-ghost" href="/services">Explore Our Services <ArrowUpRight size={15} /></Link>
+              <Link className="button button-primary" href="/services">Explore Our Services <ArrowRight size={16} /></Link>
+              <Link className="button button-ghost" href="/contact">Discuss Your Project <ArrowUpRight size={15} /></Link>
             </div>
-            <div className="hero-note"><span className="hero-note-icon"><Compass size={15} /></span> Thoughtful technology. Clear next steps.</div>
+            <div className="hero-note"><span className="hero-note-icon"><Compass size={15} /></span> Technology with a clear purpose, built around your requirements.</div>
           </div>
           <div className="col-12 col-lg-6">
             <HeroVisual />
           </div>
         </div>
         <div className="hero-bottom">
-          <span>DESIGNED FOR WHAT’S NEXT</span><span className="hero-bottom-line" /><span>SCROLL TO EXPLORE <ArrowDown size={13} /></span>
+          <span>SOFTWARE · AI · BUSINESS SYSTEMS</span><span className="hero-bottom-line" /><span>SCROLL TO EXPLORE <ArrowDown size={13} /></span>
         </div>
       </div>
     </section>
@@ -49,16 +50,21 @@ export function Hero() {
 
 export function Principles() {
   const principles = [
-    { icon: Compass, title: "Start with the problem", text: "Understand the people, process, and constraints before recommending technology." },
-    { icon: Blocks, title: "Build with intention", text: "Keep scope clear, decisions visible, and the work focused on a useful outcome." },
-    { icon: Check, title: "Hand over with care", text: "Leave teams with accessible, maintainable work and a clear path to what comes next." },
+    { icon: Compass, title: "We Begin With Your Requirements", text: "Before discussing platforms or frameworks, we learn what your business needs to accomplish." },
+    { icon: Blocks, title: "We Focus on Practical Solutions", text: "Technology should solve a problem, simplify a process, or support a meaningful business objective." },
+    { icon: Check, title: "We Consider Long-Term Maintainability", text: "A useful solution should remain understandable and manageable beyond its initial development." },
+    { icon: MessageSquareText, title: "We Value Clear Communication", text: "We keep project requirements, decisions, and next steps easy to understand." },
   ];
   return (
     <section className="principles-section section-space-sm">
       <div className="container">
+        <div className="section-heading">
+          <span className="eyebrow"><span className="eyebrow-dot" /> WHY WORK WITH US</span>
+          <h2>Why Work With SuamGlobalDigital?</h2>
+        </div>
         <div className="row g-3">
           {principles.map(({ icon: Icon, title, text }) => (
-            <div className="col-12 col-md-4" key={title}>
+            <div className="col-12 col-md-6 col-lg-3" key={title}>
               <div className="principle-card"><span className="principle-icon"><Icon size={20} /></span><div><h2>{title}</h2><p>{text}</p></div></div>
             </div>
           ))}
@@ -69,15 +75,26 @@ export function Principles() {
 }
 
 export function ServiceGrid() {
+  const serviceDescriptions: Record<string, string> = {
+    "ai-automation": "Reduce repetitive work with AI applications, intelligent assistants, document processing, and workflow automation suited to your operations.",
+    "erp-crm-hms": "Organise customer, financial, inventory, and hospital administration processes with software shaped around practical operational requirements.",
+    "websites-apps": "Build digital experiences that are easy to use, maintain, and expand, from business websites and mobile apps to back-end systems and API integrations.",
+    "seo-digital-marketing": "Help customers discover your business with technical SEO, useful website content, stronger search visibility, and goal-aligned marketing.",
+    cybersecurity: "Identify security concerns and improve how your organisation protects its systems and information, starting with the risks that matter to your operations.",
+    iot: "Bring connected-device information into useful workflows for monitoring, data collection, and better operational visibility.",
+    "cloud-devops": "Improve how applications are deployed, maintained, and monitored with cloud infrastructure and reliable deployment automation.",
+    "technology-consulting": "Evaluate technical options, improve existing systems, and plan practical next steps before deciding whether new software is needed.",
+  };
+
   return (
     <section className="section-space" id="services">
       <div className="container">
         <div className="section-heading-row">
-          <SectionHeading eyebrow="WHAT WE DO" title="Technology that moves work forward" description="From a single digital product to connected business systems, start with the challenge that matters to your team." />
+          <SectionHeading eyebrow="OUR TECHNOLOGY SERVICES" title="Software Development, AI & Digital Transformation Services" description="We help businesses plan, develop, and improve the technology they rely on—from custom software and business systems to cloud services and digital marketing." />
           <LinkArrow href="/services">Explore all services</LinkArrow>
         </div>
         <div className="row g-4 service-grid">
-          {services.map(({ slug, title, short, icon: Icon }) => (
+          {services.map(({ slug, title, icon: Icon, description }) => (
             <div className="col-12 col-md-6 col-xl-3" key={slug}>
               <Link className="service-card" href={`/services/${slug}`}>
                 <span className={`service-visual service-visual-${slug}`} aria-hidden="true">
@@ -89,7 +106,7 @@ export function ServiceGrid() {
                   <i className="service-visual-link service-visual-link-two" />
                 </span>
                 <h3>{title}</h3>
-                <p>{short}</p>
+                <p>{serviceDescriptions[slug] ?? description}</p>
                 <span className="card-link">Explore service <ArrowUpRight size={15} /></span>
               </Link>
             </div>
@@ -162,13 +179,40 @@ export function IndustryGrid() {
     <section className="section-space industries-section">
       <div className="container">
         <div className="section-heading-row">
-          <SectionHeading eyebrow="WHO WE WORK WITH" title="Built around your world" description="Every sector has its own language, workflows, and constraints. The work starts by understanding yours." />
+          <SectionHeading eyebrow="INDUSTRY SOLUTIONS" title="Technology Solutions for Different Industries" description="Healthcare, education, manufacturing, retail, travel, finance, real estate, and logistics each have distinct workflows and needs. We learn your users, operations, and technical requirements before proposing a solution." />
           <LinkArrow href="/industries">Discover industries</LinkArrow>
         </div>
-        <div className="row g-3">
+        <div className="row g-4 industry-grid">
           {industries.map(({ slug, title, icon: Icon }) => (
-            <div className="col-6 col-md-4 col-lg-3" key={slug}>
-              <Link className="industry-card" href={`/industries/${slug}`}><Icon size={20} /><span>{title}</span><ChevronRight size={16} className="industry-arrow" /></Link>
+            <div className="col-12 col-sm-6 col-lg-3" key={slug}>
+              <Link className="industry-card" href={`/industries/${slug}`}>
+                <span className={`industry-artwork industry-artwork-${slug}`} role="img" aria-label={`${title} technology illustration`}>
+                  <svg className="industry-artwork-scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                    <defs>
+                      <linearGradient id={`industry-gradient-${slug}`} x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stopColor="var(--industry-start)" />
+                        <stop offset="100%" stopColor="var(--industry-end)" />
+                      </linearGradient>
+                      <pattern id={`industry-grid-${slug}`} width="22" height="22" patternUnits="userSpaceOnUse">
+                        <path d="M22 0H0V22" fill="none" stroke="white" strokeOpacity=".13" strokeWidth="1" />
+                      </pattern>
+                    </defs>
+                    <rect width="320" height="180" fill={`url(#industry-gradient-${slug})`} />
+                    <rect width="320" height="180" fill={`url(#industry-grid-${slug})`} />
+                    <circle cx="250" cy="40" r="95" fill="white" fillOpacity=".08" />
+                    <circle cx="250" cy="40" r="66" fill="none" stroke="white" strokeOpacity=".23" />
+                    <circle cx="250" cy="40" r="43" fill="none" stroke="white" strokeOpacity=".2" />
+                    <path d="M0 148C68 109 118 201 189 150s86-34 131-68v98H0z" fill="white" fillOpacity=".1" />
+                    <path d="M0 162c68-39 118 39 189-2s86-19 131-48" fill="none" stroke="white" strokeOpacity=".48" strokeWidth="2" />
+                    <circle cx="68" cy="49" r="3" fill="white" fillOpacity=".8" />
+                    <circle cx="93" cy="83" r="2" fill="white" fillOpacity=".65" />
+                    <circle cx="206" cy="131" r="3" fill="white" fillOpacity=".7" />
+                  </svg>
+                  <span className="industry-artwork-icon"><Icon size={39} strokeWidth={1.6} aria-hidden="true" /></span>
+                  <span className="industry-artwork-caption">TECHNOLOGY IN CONTEXT</span>
+                </span>
+                <span className="industry-card-label">{title}<ChevronRight size={17} className="industry-arrow" aria-hidden="true" /></span>
+              </Link>
             </div>
           ))}
         </div>
@@ -299,13 +343,29 @@ export function InsightPreview() {
   );
 }
 
-export function PageEndCTA() {
+type PageEndCTAProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  buttonText?: string;
+};
+
+export function PageEndCTA({
+  eyebrow = "READY WHEN YOU ARE",
+  title = "Let’s make your next move a clear one.",
+  description,
+  buttonText = "Start a conversation",
+}: PageEndCTAProps) {
   return (
     <section className="page-end-cta">
       <div className="page-end-orb" aria-hidden="true" />
       <div className="container">
-        <div><span className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> READY WHEN YOU ARE</span><h2>Let’s make your next move a clear one.</h2></div>
-        <Link className="button button-primary" href="/contact">Start a conversation <ArrowUpRight size={16} /></Link>
+        <div>
+          <span className="eyebrow eyebrow-light"><span className="eyebrow-dot" /> {eyebrow}</span>
+          <h2>{title}</h2>
+          {description && <p>{description}</p>}
+        </div>
+        <Link className="button button-primary" href="/contact">{buttonText} <ArrowUpRight size={16} /></Link>
       </div>
     </section>
   );

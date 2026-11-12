@@ -1,23 +1,16 @@
 import {
-  AiSpotlight,
-  FaqSection,
   Hero,
   IndustryGrid,
-  InsightPreview,
-  LeadCapture,
   PageEndCTA,
   Principles,
   ServiceGrid,
-  Technology,
-  WorkPreview,
 } from "@/components/home/HomePageSections";
-import { DeploymentShowcase } from "@/components/home/DeploymentShowcase";
 import { PlatformMarquee } from "@/components/home/PlatformMarquee";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Digital Marketing & SEO",
-  description: "Grow your business with digital marketing, SEO and web development from SuamGlobalDigital. Explore practical strategies, tech services and clear next steps.",
+  title: "Software Development & IT Solutions",
+  description: "Explore software development, AI automation, ERP, CRM, cybersecurity, cloud services and digital marketing solutions at SUAM Global Digital.",
   path: "/",
 });
 
@@ -28,15 +21,13 @@ export default function Home() {
       <PlatformMarquee />
       <Principles />
       <ServiceGrid />
-      <AiSpotlight />
       <IndustryGrid />
-      <WorkPreview />
-      <DeploymentShowcase />
-      <Technology />
-      <LeadCapture />
-      <FaqSection />
-      <InsightPreview />
-      <PageEndCTA />
+      <PageEndCTA
+        eyebrow="LET’S DISCUSS YOUR NEXT PROJECT"
+        title="A clear conversation is the best place to begin."
+        description="Whether you’re planning an application, improving an existing platform, or exploring AI automation, tell us what your business needs and we’ll explore a practical next step."
+        buttonText="Contact Our Team"
+      />
     </>
   );
 }

@@ -72,12 +72,17 @@ export function LeadForm() {
           {errors.name && <span className="field-error" id="lead-name-error">{errors.name.message}</span>}
         </div>
         <div className="col-12 col-md-6">
-          <label htmlFor="lead-email">Work email <span aria-hidden="true">*</span></label>
+          <label htmlFor="lead-email">Business email <span aria-hidden="true">*</span></label>
           <input id="lead-email" type="email" autoComplete="email" {...register("email")} aria-invalid={Boolean(errors.email)} aria-describedby={errors.email ? "lead-email-error" : undefined} />
           {errors.email && <span className="field-error" id="lead-email-error">{errors.email.message}</span>}
         </div>
         <div className="col-12 col-md-6">
-          <label htmlFor="lead-company">Organisation</label>
+          <label htmlFor="lead-phone">Phone number <span>(optional)</span></label>
+          <input id="lead-phone" type="tel" autoComplete="tel" {...register("phone")} aria-invalid={Boolean(errors.phone)} aria-describedby={errors.phone ? "lead-phone-error" : undefined} />
+          {errors.phone && <span className="field-error" id="lead-phone-error">{errors.phone.message}</span>}
+        </div>
+        <div className="col-12 col-md-6">
+          <label htmlFor="lead-company">Company name <span>(optional)</span></label>
           <input id="lead-company" autoComplete="organization" {...register("company")} />
         </div>
         </>}
@@ -122,9 +127,8 @@ export function LeadForm() {
         <div className="col-12">
           <label className="consent-label" htmlFor="lead-consent">
             <input id="lead-consent" type="checkbox" {...register("consent")} aria-invalid={Boolean(errors.consent)} aria-describedby={errors.consent ? "lead-consent-error" : undefined} />
-            <span>I agree that SuamGlobalDigital may use these details to respond to my enquiry.</span>
+            <span>By submitting this form, you acknowledge that we will use your information to respond to your enquiry, as explained in our <Link href="/privacy-policy">Privacy Policy</Link>.</span>
           </label>
-          <p className="consent-more"><Link href="/privacy-policy">Read the privacy policy.</Link></p>
           {errors.consent && <span className="field-error" id="lead-consent-error">{errors.consent.message}</span>}
         </div>
         </>}
@@ -135,7 +139,7 @@ export function LeadForm() {
             {step < 2 ? (
               <button className="button button-primary" type="button" onClick={() => void nextStep()}>Continue <ArrowRight size={15} /></button>
             ) : (
-              <button className="button button-primary submit-button" type="submit" disabled={isSubmitting}>{isSubmitting ? "Sending your brief…" : "Send project brief"}</button>
+              <button className="button button-primary submit-button" type="submit" disabled={isSubmitting}>{isSubmitting ? "Sending your enquiry…" : "Send Enquiry"}</button>
             )}
           </div>
           {step === 2 && <p className="form-note">Your information is used only to respond to this enquiry.</p>}

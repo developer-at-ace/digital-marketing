@@ -4,6 +4,7 @@ const leadSchema = new Schema(
   {
     name: { type: String, required: true, maxlength: 100 },
     email: { type: String, required: true, maxlength: 254 },
+    phone: { type: String, default: "", maxlength: 40 },
     company: { type: String, default: "", maxlength: 120 },
     service: { type: String, required: true, maxlength: 100 },
     project: { type: String, required: true, maxlength: 5000 },
